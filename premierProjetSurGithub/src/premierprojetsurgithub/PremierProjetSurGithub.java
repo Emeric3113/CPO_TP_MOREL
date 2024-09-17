@@ -4,6 +4,8 @@
  */
 package premierprojetsurgithub;
 
+import java.util.Scanner;
+
 /**
  *
  * @author emeri
@@ -15,6 +17,7 @@ public class PremierProjetSurGithub {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println("Hello World!");
     }
     
 }

@@ -18,10 +18,19 @@ public class TP1Exo1ManipNombresInt {
     public static void main(String[] args) {
         int nb1;
         int nb2;
+        int somme;
+        int diff;
         
         Scanner sc = new Scanner(System.in);
         nb1 = sc.nextInt();
         nb2 = sc.nextInt();
+        System.out.println("nb1 : "+nb1 +"; nb2 : "+ nb2);
+        somme = nb1 + nb2;
+        diff = nb1 - nb2;
+        System.out.println("Somme : "+ somme +"\nDifférence : "+ diff + "\nProduit : "+ nb1*nb2);
+        System.out.println("Quotient : "+nb1/nb2);
+        System.out.println("Reste : "+nb1%nb2);
+        
         // TODO code application logic here
     }
     

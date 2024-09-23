@@ -25,11 +25,12 @@ public class TP1Exo3GuessMyNumber {
         Scanner sc = new Scanner(System.in);
         int nb = generateurAleat.nextInt(100);
         saisie = -1;
+        System.out.println("Devinez le nombre !");
         while(a){
         saisie = sc.nextInt();
-        if(saisie == nb){System.out.println("gagné !"); a = false;}}
+        if(saisie == nb){System.out.println("gagné !"); a = false;}
         if (saisie > nb){System.out.println("trop grand !");}
-        if (saisie < nb){System.out.println("trop petit !");}
-        }
+        if (saisie < nb){System.out.println("trop petit !");}}
+    }
     
 }

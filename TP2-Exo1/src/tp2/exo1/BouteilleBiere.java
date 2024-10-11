@@ -29,9 +29,24 @@ public class BouteilleBiere {
         System.out.println("Bouteille de " + nom +" (" + degreAlcool + " degres) \nBrasserie : " + brasserie ) ;
     }
     public boolean Decapsuler(){
-        return true;
+        if(ouverte == false){
+            ouverte = true;
+            return ouverte;
+        }else{
+            System.out.println("Bouteille déjà ouverte");
+            return false;
+        }
+    }  
+    @Override
+    public String toString() {
+        String chaine_a_retourner;
+        chaine_a_retourner = nom + " (" + degreAlcool + " degrés)Ouverte ? ";
+        if (ouverte == true ){ 
+            chaine_a_retourner += "oui";
+        }else
+            chaine_a_retourner += "non" ;
+        
+        return chaine_a_retourner ;
     }
-    public String toString(){
-        return "";
-    }
+
 }

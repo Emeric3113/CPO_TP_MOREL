@@ -9,5 +9,21 @@ package tp2.exo1;
  * @author emeri
  */
 public class BouteilleBiere {
+    String nom;
+    double degreAlcool;
+    String brasserie;
+    boolean ouverte;
     
+    public void Biere(String nom, double degreAlcool, String brasserie) {
+        
+    }
+    public void lireEtiquette(){
+        System.out.println("Bouteille de " + nom +" (" + degreAlcool + " degres) \nBrasserie : " + brasserie ) ;
+    }
+    public boolean Decapsuler(){
+        return true;
+    }
+    public String toString(){
+        return "";
+    }
 }

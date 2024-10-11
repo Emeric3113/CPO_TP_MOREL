@@ -14,6 +14,14 @@ public class BouteilleBiere {
     String brasserie;
     boolean ouverte;
     
+    public BouteilleBiere(String unNom, double unDegre, String
+        uneBrasserie) {
+        nom = unNom;
+        degreAlcool = unDegre;
+        brasserie = uneBrasserie;
+        ouverte = false;
+        }
+    
     public void Biere(String nom, double degreAlcool, String brasserie) {
         
     }

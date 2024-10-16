@@ -14,8 +14,7 @@ public class BouteilleBiere {
     String brasserie;
     boolean ouverte;
     
-    public BouteilleBiere(String unNom, double unDegre, String
-        uneBrasserie) {
+    public BouteilleBiere(String unNom, double unDegre, String uneBrasserie) {
         nom = unNom;
         degreAlcool = unDegre;
         brasserie = uneBrasserie;

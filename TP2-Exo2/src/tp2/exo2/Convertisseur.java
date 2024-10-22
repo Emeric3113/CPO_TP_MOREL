@@ -9,41 +9,44 @@ package tp2.exo2;
  * @author emeri
  */
 public class Convertisseur {
-    double temp;
-    int nbConversions = 0;
+    
+    int nbConversions;
 
     public Convertisseur(double temp) {
-        this.temp = temp;
+        this.nbConversions = 0;
     }
     
     
-    public double CelciusVersKelvin(double tCelcius){
+    public double celsiusVersKelvin(double celsius) {
         nbConversions++;
-        return tCelcius+273;
+        return celsius + 273.15;
     }
-    public double KelvinVersCelcius(double tKelvin){
+    public double kelvinVersCelsius(double kelvin) {
         nbConversions++;
-        return tKelvin-273;
+        return kelvin - 273.15;
     }
-    public double FarenheitVersCelcius(double tFarenheit){
+    public double fahrenheitVersCelsius(double fahrenheit) {
         nbConversions++;
-        return (tFarenheit-32/1.8);
+        return (fahrenheit - 32) * 5/9;
     }
-    public double CelciusVersFarenheit(double tCelcius){
+    public double celsiusVersFahrenheit(double celsius) {
         nbConversions++;
-        return (tCelcius*1.8)+32;
+        return celsius * 9/5 + 32;
     }
-    public double KelvinVersFarenheit(double tKelvin){
+    public double kelvinVersFahrenheit(double kelvin) {
         nbConversions++;
-        return CelciusVersFarenheit(KelvinVersCelcius(tKelvin));
+        return (kelvin - 273.15) * 9/5 + 32;
     }
-    public double FarenheitVersKelvin(double tFarenheit){
+    public double fahrenheitVersKelvin(double fahrenheit) {
         nbConversions++;
-        return CelciusVersKelvin(FarenheitVersCelcius(tFarenheit));
+        return (fahrenheit - 32) * 5/9 + 273.15;
     }
     
-    public void LireTemp(){
-        System.out.println("La temperature est de " + temp+ "\n il y a eu : "+nbConversions+" conversions");
+    
+    @Override
+    public String toString() {
+        return "Nombre de conversions effectuées : " + nbConversions;
     }
+    
     
 }

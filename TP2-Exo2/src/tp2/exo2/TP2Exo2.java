@@ -16,62 +16,32 @@ public class TP2Exo2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        int conv;
-        boolean a;
-        a = true;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Saisissez une température :");
-        double temperature = sc.nextDouble();
-        System.out.println("Saissisez une coversion :");
-        System.out.println("""
-            1. Kelvin vers Celcius
-            2. Celcius vers Kelvin
-            3. Farenheit vers Celcius
-            4. Celcius vers Farenheit
-            5. Kelvin vers Farenheit
-            6. Farenheit vers Kelvin""");
-        
-        while (a){
-            conv=sc.nextInt();
-            switch(conv){
-                case 1:
-                    Convertisseur tempKC = new Convertisseur(temperature);
-                    tempKC.LireTemp();
-                    a=false;
-                    break;
-                case 2:
-                    Convertisseur tempCK = new Convertisseur(temperature);
-                    tempCK.LireTemp();
-                    a=false;
-                    break;
-                case 3:
-                    Convertisseur tempFC = new Convertisseur(temperature);
-                    tempFC.LireTemp();
-                    a=false;
-                    break;
-                case 4:
-                    Convertisseur tempCF = new Convertisseur(temperature);
-                    tempCF.LireTemp();
-                    a=false;
-                    break;
-                case 5:
-                    Convertisseur tempKF = new Convertisseur(temperature);
-                    tempKF.LireTemp();
-                    a=false;
-                    break;
-                case 6:
-                    Convertisseur tempFK = new Convertisseur(temperature);
-                    tempFK.LireTemp();
-                    a=false;
-                    break;
-                
-                
-                default:
-                    System.err.println("erreur de saisie");
-                    break;
-            }
-        }
+        Scanner sc;
+        sc = new Scanner(System.in);
+        String temperature = sc.nextLine();
+        double temp = Double.parseDouble(temperature);
+        Convertisseur conv1 = new Convertisseur(temp);
+
+        // Exécution de quelques conversions
+        double tempKelvin = conv1.celsiusVersKelvin(temp);
+        System.out.println(temp + "°C en Kelvin : " + tempKelvin);
+
+        double tempCelsius = conv1.kelvinVersCelsius(temp);
+        System.out.println(temp + "K en Celsius : " + tempCelsius);
+
+        double tempFahrenheit = conv1.celsiusVersFahrenheit(temp);
+        System.out.println(temp + "°C en Fahrenheit : " + tempFahrenheit);
+
+        // Affichage du nombre de conversions effectuées
+        System.out.println(conv1);
+
+        // Création d'un deuxième convertisseur
+        Convertisseur conv2 = new Convertisseur(temp);
+        double tempKelvin2 = conv2.fahrenheitVersKelvin(temp);
+        System.out.println(temp + "°F en Kelvin : " + tempKelvin2);
+
+        // Affichage du nombre de conversions effectuées par le deuxième convertisseur
+        System.out.println(conv2);
     }
     
 }

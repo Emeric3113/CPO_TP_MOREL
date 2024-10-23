@@ -12,11 +12,13 @@ public class Voiture {
     String Modele;
     String Marque;
     int PuissanceCV;
+    Personne Proprietaire ;
 
-    public Voiture(String Modele, String Marque, int PuissanceCV) {
+    public Voiture(String Modele, String Marque, int PuissanceCV, Personne Proprietaire) {
         this.Modele = Modele;
         this.Marque = Marque;
         this.PuissanceCV = PuissanceCV;
+        this.Proprietaire = null;
     }
 
     @Override

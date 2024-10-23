@@ -11,10 +11,14 @@ package tp2.exo4;
 public class Personne {
     String Nom;
     String Prenom;
+    int nbVoitures;
+    Voiture [] liste_voitures;
 
-    public Personne(String Nom, String Prenom) {
+    public Personne(String Nom, String Prenom, int nbVoitures, Voiture[] liste_voitures) {
         this.Nom = Nom;
         this.Prenom = Prenom;
+        this.nbVoitures = 0;
+        this.liste_voitures = new Voiture [3];
     }
 
     @Override

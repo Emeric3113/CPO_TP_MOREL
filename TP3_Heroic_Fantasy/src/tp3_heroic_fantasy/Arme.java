@@ -14,7 +14,7 @@ public abstract class Arme {
 
     public Arme(String nom, int attaque) {
         this.nom = nom;
-        this.attaque = attaque;
+        this.attaque = Math.min(attaque, 100);
     }
 
     void levelAttaque(){
